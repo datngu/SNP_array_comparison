@@ -1,0 +1,45 @@
+ 5728 pts/2    R     26:45 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr4_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_2.txt
+ 5729 pts/2    R     42:40 bcftools +fill-tags -o batch_2/chr4_reference.vcf.gz -Oz
+ 5826 pts/2    S     26:05 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr3_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_2.txt
+ 5827 pts/2    R     41:26 bcftools +fill-tags -o batch_2/chr3_reference.vcf.gz -Oz
+ 7261 pts/2    S     18:11 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr1_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_2.txt
+ 7262 pts/2    R     29:49 bcftools +fill-tags -o batch_2/chr1_reference.vcf.gz -Oz
+ 7462 pts/2    S     17:18 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr2_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_2.txt
+ 7463 pts/2    R     27:14 bcftools +fill-tags -o batch_2/chr2_reference.vcf.gz -Oz
+ 7820 pts/2    S     14:46 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr9_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_3.txt
+ 7821 pts/2    R     23:27 bcftools +fill-tags -o batch_3/chr9_reference.vcf.gz -Oz
+ 8282 pts/2    R     11:37 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr12_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_3.txt
+ 8283 pts/2    R     18:29 bcftools +fill-tags -o batch_3/chr12_reference.vcf.gz -Oz
+ 8419 pts/2    R     10:44 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr14_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_4.txt
+ 8420 pts/2    R     17:05 bcftools +fill-tags -o batch_4/chr14_reference.vcf.gz -Oz
+ 8442 pts/2    S     10:11 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr11_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_3.txt
+ 8443 pts/2    R     16:51 bcftools +fill-tags -o batch_3/chr11_reference.vcf.gz -Oz
+ 8569 pts/2    R      9:21 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr10_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_3.txt
+ 8570 pts/2    R     15:27 bcftools +fill-tags -o batch_3/chr10_reference.vcf.gz -Oz
+ 8702 pts/2    S      8:49 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr16_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_4.txt
+ 8703 pts/2    R     13:52 bcftools +fill-tags -o batch_4/chr16_reference.vcf.gz -Oz
+ 8743 pts/2    R     16:43 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr7_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_2.txt
+ 8744 pts/2    S      4:32 bcftools +fill-tags -o batch_2/chr7_test_set.vcf.gz -Oz
+ 9250 pts/2    R     10:55 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr6_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_2.txt
+ 9251 pts/2    S      2:53 bcftools +fill-tags -o batch_2/chr6_test_set.vcf.gz -Oz
+ 9299 pts/2    S      4:58 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr22_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_8.txt
+ 9300 pts/2    R      7:52 bcftools +fill-tags -o batch_8/chr22_reference.vcf.gz -Oz
+ 9322 pts/2    R      4:41 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr13_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_4.txt
+ 9323 pts/2    R      7:28 bcftools +fill-tags -o batch_4/chr13_reference.vcf.gz -Oz
+ 9505 pts/2    R      8:01 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr17_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_4.txt
+ 9506 pts/2    S      2:06 bcftools +fill-tags -o batch_4/chr17_test_set.vcf.gz -Oz
+ 9715 pts/2    R      5:47 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr20_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_5.txt
+ 9716 pts/2    S      1:31 bcftools +fill-tags -o batch_5/chr20_test_set.vcf.gz -Oz
+ 9750 pts/2    S      2:43 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr8_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_3.txt
+ 9751 pts/2    R      4:20 bcftools +fill-tags -o batch_3/chr8_reference.vcf.gz -Oz
+ 9756 pts/2    S      2:34 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr18_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_5.txt
+ 9757 pts/2    R      4:07 bcftools +fill-tags -o batch_5/chr18_reference.vcf.gz -Oz
+ 9897 pts/2    R      4:32 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr15_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_4.txt
+ 9898 pts/2    S      1:11 bcftools +fill-tags -o batch_4/chr15_test_set.vcf.gz -Oz
+ 9899 pts/2    R      4:32 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr5_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_2.txt
+ 9900 pts/2    S      1:11 bcftools +fill-tags -o batch_2/chr5_test_set.vcf.gz -Oz
+10158 pts/2    R      3:40 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr19_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ALL_pop_batch_5.txt
+10159 pts/2    S      0:57 bcftools +fill-tags -o batch_5/chr19_test_set.vcf.gz -Oz
+10405 pts/2    S      0:36 bcftools view /media/datn/data/1KG/IGSR_h38_high_cov/VCF_no_chr/chr21_2504_unrelated_NYGC_high_cov_phased_no_chr_filled_tag.vcf.gz -S ^ALL_pop_batch_9.txt
+10406 pts/2    R      0:54 bcftools +fill-tags -o batch_9/chr21_reference.vcf.gz -Oz
+10525 pts/2    S+     0:00 grep --color=auto bcftools
