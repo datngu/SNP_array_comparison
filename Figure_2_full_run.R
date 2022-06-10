@@ -140,7 +140,7 @@ require(ggplot2)
 library(patchwork)
 
 p1 = ggplot(data=df, aes(x = array_rename, y = mean_r2, fill = MAF_range, color = MAF_range)) +
-geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_r2 - sd_r2, ymax = mean_r2 + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Imputation r2") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("A")
+geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_r2 - sd_r2, ymax = mean_r2 + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.1)) + theme_light() + ylab("Imputation r2") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("A")
 
 p1x = p1 + theme(legend.position="none") + theme(
   axis.text.x = element_blank(),
@@ -150,7 +150,7 @@ p1x = p1 + theme(legend.position="none") + theme(
 
 
 p2 = ggplot(data=df, aes(x = array_rename, y = mean_cov, fill = MAF_range, color = MAF_range)) +
-geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Impuation coverage") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("B") + theme(legend.position="bottom", axis.title.x = element_blank())
+geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.1)) + theme_light() + ylab("Impuation coverage") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("B") + theme(legend.position="bottom", axis.title.x = element_blank(), axis.text=element_text(size = 6)) + theme(legend.position="none")
 
 l = list(p1x,p2)
 
@@ -160,7 +160,7 @@ m = wrap_plots(l, nrow = 2, plot_layout(guides = "auto"))
 
 #ggplot(data=df, aes(x = array, y = mean_cov, fill = MAF_range)) + geom_bar(stat="identity", color="black", position=position_dodge()) + geom_errorbar(aes(x = array, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0.5, position=position_dodge(.9)) + guides(x = guide_axis(angle = 45)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Mean coverage (r2s >= 0.8)") + xlab("SNP array") + facet_wrap(~ pop, nrow = 2)
 
-pdf( file= "../../output_paper/Figure_2.pdf",   width=12, height=15)
+pdf( file= "../../output_paper/Figure_2.pdf",   width= 7, height=8)
  m
 dev.off()
 
@@ -174,7 +174,7 @@ require(ggplot2)
 library(patchwork)
 
 p1 = ggplot(data=df, aes(x = array_rename, y = mean_r2, fill = MAF_range, color = MAF_range)) +
-geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_r2 - sd_r2, ymax = mean_r2 + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Imputation r2") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("A")
+geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_r2 - sd_r2, ymax = mean_r2 + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.2)) + theme_light() + ylab("Imputation r2") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("A")
 
 p1x = p1 + theme(legend.position="none") + theme(
   axis.text.x = element_blank(),
@@ -184,7 +184,7 @@ p1x = p1 + theme(legend.position="none") + theme(
 
 
 p2 = ggplot(data=df, aes(x = array_rename, y = mean_cov, fill = MAF_range, color = MAF_range)) +
-geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Impuation coverage") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("B") + theme(legend.position="bottom", axis.title.x = element_blank())
+geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.2)) + theme_light() + ylab("Impuation coverage") + xlab("SNP arrays") + facet_wrap(~ pop, nrow = 2) + ggtitle("B") + theme(legend.position="bottom", axis.title.x = element_blank(), axis.text=element_text(size = 6)) + theme(legend.title=element_blank())
 
 l = list(p1x,p2)
 
@@ -194,9 +194,10 @@ m = wrap_plots(l, nrow = 2, plot_layout(guides = "auto"))
 
 #ggplot(data=df, aes(x = array, y = mean_cov, fill = MAF_range)) + geom_bar(stat="identity", color="black", position=position_dodge()) + geom_errorbar(aes(x = array, ymin = mean_cov - sd_r2, ymax = mean_cov + sd_r2), width = 0.5, position=position_dodge(.9)) + guides(x = guide_axis(angle = 45)) + scale_y_continuous(breaks=seq(0,1,0.05)) + theme_light() + ylab("Mean coverage (r2s >= 0.8)") + xlab("SNP array") + facet_wrap(~ pop, nrow = 2)
 
-pdf(file= "../../output_paper/Figure_2_sup.pdf",   width=12, height=15)
+pdf(file= "../../output_paper/Figure_2_sup.pdf",   width=7, height=8)
  m
 dev.off()
+
 
 
 

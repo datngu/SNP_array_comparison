@@ -42,7 +42,7 @@ array_list = c("Axiom_GW_ASI", "Axiom_GW_CHB", "Axiom_GW_EUR", "Axiom_GW_PanAFR"
 
 
 
-# "Breast_cancer"
+
 get_cor_pop <- function(pop, array_list, trait_list = c("HEIGHT", "BMI", "Type_2_diabetes")){
 
   res = list()
@@ -100,9 +100,10 @@ df$sd = as.numeric(df$sd)
 df2 = df
 df2$trait[df2$trait == "HEIGHT"] = "Height" 
 require(ggplot2)
-p = ggplot(data = df2, aes(x = array_rename, y = mean, fill = trait, color = trait)) + geom_point(stat="identity", position = position_dodge(.5)) + geom_errorbar(aes(x = array_rename, ymin = mean - sd, ymax = mean + sd), width = 0, position = position_dodge(.5)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.01), limits = c(0.8,1) ) + theme_light() + ylab("PGS correlation") + xlab("SNP array")  + facet_wrap(~ pop, nrow = 2) + theme(legend.position="bottom", axis.title.x = element_blank())
 
-pdf(file= "../../output_paper/Figure_3.pdf",  width=12, height=9)
+p = ggplot(data = df2, aes(x = array_rename, y = mean, fill = trait, color = trait)) + geom_point(stat="identity", position = position_dodge(.7)) + geom_errorbar(aes(x = array_rename, ymin = mean - sd, ymax = mean + sd), width = 0, position = position_dodge(.7)) + guides(x = guide_axis(angle = 90)) + scale_y_continuous(breaks=seq(0,1,0.02), limits = c(0.85,1) ) + theme_light() + ylab("PGS correlation") + xlab("SNP array")  + facet_wrap(~ pop, nrow = 2) + theme(legend.position="bottom", axis.title.x = element_blank(), axis.text=element_text(size = 6)) + theme(legend.title=element_blank())
+
+pdf(file= "../../output_paper/Figure_3.pdf",  width=8, height=6)
 p
 dev.off()
 
