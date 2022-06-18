@@ -69,11 +69,11 @@ get_imp_acc_array <- function(array_path, flag){
 
 # df2 = do.call("rbind", res)
 
-df1 = get_imp_acc_array("pmra/real_array", "PMRA_Real")
-df2 = get_imp_acc_array("pmra/simulated_array", "PMRA_Simulated")
+df1 = get_imp_acc_array("pmra_real_array", "PMRA_Real")
+df2 = get_imp_acc_array("pmra_simulated_array", "PMRA_Simulated")
 
-df3 = get_imp_acc_array("gsa/real_array", "GSA_Real")
-df4 = get_imp_acc_array("gsa/simulated_array", "GSA_Simulated")
+df3 = get_imp_acc_array("gsa_real_array", "GSA_Real")
+df4 = get_imp_acc_array("gsa_simulated_array", "GSA_Simulated")
 
 df = rbind(df1, df2, df3, df4)
 
@@ -111,6 +111,42 @@ write.csv(stat_df, file = "../../output_paper/tables/Imputation_acc_real_simulat
 
 
 # # p2
+
+
+
+cutoffs = list("(0-0.01]" = c(0, 0.01), "(0.01-0.05]" = c(0.01, 0.05), "(0.01-0.5]" = c(0.01, 0.5),  "(0.05-0.5]" = c(0.05,0.5))
+
+
+get_mean_correlation <- function(df, cutoffs, flag = "flag"){
+
+  res = list()
+  for( i in 1: length(cutoffs)){
+    cut = cutoffs[[i]]
+    cut_name = names(cutoffs)[i]
+    df2 = df[df$AF > cut[1] & df$AF <= cut[2],]
+    m = mean(df2$r_2, na.rm =T)
+    t = paste(cut_name, flag, sep = "_")
+    r = c(m,t, flag)
+    res[[t]] = r  
+  }
+  rdf = do.call("rbind", res)
+  return(rdf)
+}
+
+
+get_imp_acc_array <- function(array_path, flag){
+  res = list()
+  cutoffs = list("(0-0.01]" = c(0, 0.01), "(0.01-0.05]" = c(0.01, 0.05), "(0.01-0.5]" = c(0.01, 0.5),  "(0.05-0.5]" = c(0.05,0.5))
+  for(i in 1:22){
+    x = fread( paste0(array_path, "/chr", i , "_imputed.correlation.txt.gz"))
+    res[[i]] =  get_mean_imp_acc(x, cutoffs, flag)
+  }
+  df = do.call("rbind", res)
+  df = as.data.frame(df)
+  names(df) = c("imp_acc", "Bin", "Type")
+  df$imp_acc = as.numeric(df$imp_acc)
+  return(df)
+}
 
 
 

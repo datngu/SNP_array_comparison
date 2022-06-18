@@ -73,6 +73,8 @@ wait
 
 # PRS
 
+array_list="gsa_real_array gsa_simulated_array pmra_real_array pmra_simulated_array wgs_24_sample"
+wgs_24_sample
 
 for array_dir in $array_list
 do
@@ -81,8 +83,10 @@ do
   get_PRS $array_dir Type_2_diabetes
 done
 
-
-
+array_dir="wgs_24_sample"
+  get_PRS $array_dir HEIGHT
+  get_PRS $array_dir BMI
+  get_PRS $array_dir Type_2_diabetes
 
 # ### copy results
 # get -r PRS_result /media/datn/data2gb/GitHub/SNP_array_comparison_full_data/real_data
