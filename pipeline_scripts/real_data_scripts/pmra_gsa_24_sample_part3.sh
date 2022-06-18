@@ -11,7 +11,7 @@
 
 ## PRS
 
-array_list="gsa_real_array gsa_simulated_array pmra_real_array pmra_simulated_array"
+#array_list="gsa_real_array gsa_simulated_array pmra_real_array pmra_simulated_array"
 
 mkdir PRS_result
 
