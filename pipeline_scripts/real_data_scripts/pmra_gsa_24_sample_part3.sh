@@ -10,9 +10,8 @@
 
 
 ## PRS
-cd /dragennfs/area8/datnguyen/PRS_arrays_project/VN_1008_all/gsa_real_data
 
-array_list="real_24_sample simulated_24_sample"
+array_list="gsa_real_array gsa_simulated_array pmra_real_array pmra_simulated_array"
 
 mkdir PRS_result
 
